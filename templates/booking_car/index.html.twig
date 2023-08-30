@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Забронировать{% endblock %}
+
+{% block body %}
+    <h3>Бронировать автомобиль</h3>
+
+    {% if message is defined %}
+    <p>{{ message }}</p>
+    {% endif %}
+    {% if form is defined %}
+    {{form(form)}}
+    {%endif%}
+    <style>
+        label {
+            margin-right: 10px;
+            width: 100px;
+        }
+        select {
+            width: 150px;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Добавление пользователя{% endblock %}
+
+{% block body %}
+    <h3>Добавить пользователя</h3>
+    <hr>
+    {% if message is defined and message != '' %}
+        <p>
+            {{ message }}
+        </p>
+    {% endif %}
+    {{ form(form_user) }}
+{% endblock %}

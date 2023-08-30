@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Автомобили{% endblock %}
+
+{% block body %}
+    {% if cars is defined %}
+    <div>
+        <h3 class="d-inline-block mr-5">Автомобили</h3>
+        <a href="{{path('app_car_new')}}" class="btn btn-sm btn-primary">Добавить</a>
+        <ul>
+            {% for car in cars %}
+            <li>{{car.manufacturer}} {{car.model}} - {{car.licenseplate}} 
+                {#<button type="button" data-carid="{{car.id}}" data-userid="{{user_found.id}}" class="btn btn-primary btn-sm order_car"> забронировать </button>#}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+{% endblock %}

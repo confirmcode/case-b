@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block body %}
+    {#{error}#}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {{lastUsername}}
+    {% else %}
+        {{ form(form_login) }}
+    {% endif %}
+{% endblock %}
